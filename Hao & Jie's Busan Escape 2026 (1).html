@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082c3b">
+  <title>釜山五天四夜｜2026.11.05–11.09</title>
+  <style>
+    :root {
+      --ink:#17313b; --muted:#64767d; --paper:#f5f3ed; --card:#fffdfa;
+      --sea:#0b7189; --deep:#082c3b; --sky:#8bd3dd; --sun:#ffb45c;
+      --coral:#ef6f61; --line:#d9e1df; --pass:#e3f5ef; --warn:#fff1d8;
+      --shadow:0 18px 50px rgba(8,44,59,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.65}
+    a{color:var(--sea);text-decoration-thickness:1px;text-underline-offset:3px}
+    .hero{position:relative;overflow:hidden;padding:70px 22px 52px;color:white;background:linear-gradient(135deg,#072733 0%,#0b7189 62%,#78c9d5 100%)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.09)}
+    .hero:before{width:440px;height:440px;right:-130px;top:-240px}.hero:after{width:260px;height:260px;left:-120px;bottom:-150px}
+    .hero-inner{position:relative;max-width:1080px;margin:auto;z-index:1}
+    .eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;opacity:.84}
+    h1{font-size:clamp(2.35rem,7vw,5.8rem);line-height:.98;margin:.3rem 0 1rem;letter-spacing:-.055em}
+    .hero p{max-width:720px;margin:0;font-size:clamp(1rem,2.5vw,1.25rem);opacity:.9}
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+    .pill{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);font-size:.87rem}
+    nav{position:sticky;top:0;z-index:8;overflow-x:auto;white-space:nowrap;background:rgba(245,243,237,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px max(16px,calc((100vw - 1080px)/2))}
+    nav a{display:inline-block;padding:7px 12px;color:var(--ink);font-size:.88rem;text-decoration:none;border-radius:99px}
+    nav a:hover{background:white}
+    main{max-width:1080px;margin:auto;padding:34px 20px 72px}
+    section{scroll-margin-top:72px;margin:0 0 44px}
+    h2{font-size:clamp(1.65rem,4vw,2.3rem);line-height:1.2;margin:0 0 18px;letter-spacing:-.03em}
+    h3{line-height:1.28;margin:.1rem 0 .45rem}
+    .lead{color:var(--muted);max-width:800px;margin-top:-8px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid rgba(23,49,59,.08);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+    .info-card{grid-column:span 4}.info-card strong{display:block;font-size:1.05rem;margin-bottom:5px}.info-card p{margin:0;color:var(--muted)}
+    .route{grid-column:span 12;display:grid;grid-template-columns:140px 1fr;gap:24px;padding:0;overflow:hidden}
+    .date{padding:24px 20px;color:#fff;background:var(--deep);display:flex;flex-direction:column;justify-content:space-between}
+    .date .num{font-size:2.4rem;line-height:1;font-weight:900}.date .dow{font-size:.82rem;letter-spacing:.14em;opacity:.78}
+    .route-body{padding:23px 25px 25px 0}
+    .route-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px}
+    .zone{color:var(--sea);font-size:.82rem;font-weight:800;letter-spacing:.08em}
+    .timeline{list-style:none;padding:0;margin:14px 0 0}
+    .timeline li{display:grid;grid-template-columns:72px 1fr;gap:14px;position:relative;padding:0 0 17px}
+    .timeline li:before{content:"";position:absolute;left:78px;top:9px;bottom:-3px;width:1px;background:var(--line)}
+    .timeline li:last-child:before{display:none}
+    .time{font-variant-numeric:tabular-nums;font-size:.88rem;font-weight:800;color:var(--sea)}
+    .event{position:relative;padding-left:17px}.event:before{content:"";position:absolute;left:2px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px var(--card)}
+    .event b{display:block}.event small{display:block;color:var(--muted);font-size:.86rem;margin-top:2px}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:.75rem;font-weight:750;padding:3px 9px;border-radius:99px;background:#edf1f1;color:#456068}
+    .tag.pass{background:var(--pass);color:#14725d}.tag.book{background:#fce9e7;color:#a44138}.tag.photo{background:#e9eefb;color:#3f568c}
+    .note{border-radius:18px;padding:17px 19px;background:var(--warn);border:1px solid #efd8ae}
+    .note strong{color:#8a4f13}.note p{margin:.35rem 0 0}
+    .pass-plan{grid-column:span 7}.flight{grid-column:span 5}
+    table{width:100%;border-collapse:collapse;font-size:.9rem}
+    th,td{text-align:left;vertical-align:top;padding:11px 8px;border-bottom:1px solid var(--line)}th{font-size:.77rem;letter-spacing:.06em;color:var(--muted)}
+    .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:9px 20px}
+    .check{display:flex;gap:9px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line)}
+    .check input{margin-top:6px;accent-color:var(--sea);transform:scale(1.15)}
+    .maplinks{display:flex;flex-wrap:wrap;gap:9px}.maplinks a{display:inline-flex;padding:8px 12px;border-radius:99px;background:white;border:1px solid var(--line);text-decoration:none;font-size:.84rem}
+    .nm{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:3px 10px;border-radius:99px;background:#e7f6ec;color:#0c7f3c;border:1px solid #bfe4cc;font-size:.75rem;font-weight:800;text-decoration:none;text-underline-offset:0}
+    .nm:hover{background:#d5efdf}
+    .gm{display:inline-flex;align-items:center;gap:5px;margin-top:7px;margin-left:6px;padding:3px 10px;border-radius:99px;background:#e8eefb;color:#2f4f9e;border:1px solid #c6d4f2;font-size:.75rem;font-weight:800;text-decoration:none}
+    .gm:hover{background:#dbe5f9}
+    .sources{font-size:.85rem;color:var(--muted)}.sources li{margin-bottom:7px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    button{border:0;border-radius:99px;padding:10px 15px;background:var(--deep);color:white;font:inherit;font-weight:750;cursor:pointer}
+    button.secondary{background:white;color:var(--deep);border:1px solid var(--line)}
+    footer{text-align:center;color:var(--muted);font-size:.8rem;padding:0 20px 40px}
+    @media(max-width:760px){.info-card,.pass-plan,.flight{grid-column:span 12}.route{grid-template-columns:1fr}.date{flex-direction:row;align-items:end}.route-body{padding:20px}.route-head{display:block}.checklist{grid-template-columns:1fr}.hero{padding-top:52px}.timeline li{grid-template-columns:57px 1fr}.timeline li:before{left:63px}}
+    @media print{nav,.actions{display:none}.hero{padding:30px 20px}.hero h1{font-size:42px}.card{box-shadow:none;break-inside:avoid}.route{break-inside:avoid}body{background:white}main{padding-bottom:0}a{color:inherit;text-decoration:none}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Busan · 5 Days 4 Nights</div>
+      <h1>釜山，沿著海走。</h1>
+      <p>海雲台藍線、寺院海岸、廣安大橋煙火與影島巷弄——以 호텔 라뮤에뜨 為基地的五天四夜攝影旅行。</p>
+      <div class="hero-meta">
+        <span class="pill">📅 2026.11.05 Thu — 11.09 Mon</span>
+        <span class="pill">🚄 11.04 21:05 左營 → 桃園</span>
+        <span class="pill">🏨 호텔 라뮤에뜨・海雲台</span>
+        <span class="pill">🛳 11.06 夜間遊艇 19:30</span>
+        <span class="pill">🎆 11.07 釜山煙火節</span>
+        <span class="pill">🕘 韓國快台灣 1 小時</span>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="頁面導覽">
+    <a href="#overview">旅程摘要</a><a href="#booking">訂位憑證</a><a href="#day1">D1</a><a href="#day2">D2</a><a href="#day3">D3 煙火</a><a href="#day4">D4</a><a href="#day5">D5</a><a href="#pass">Pass</a><a href="#checklist">預約清單</a>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <h2>旅程摘要</h2>
+      <p class="lead">以區域集中安排：D1 海雲台、D2 東海岸＋夜間遊艇、D3 二妓臺＋廣安里煙火、D4 北港親水公園＋甘川＋松島＋影島（含海景咖啡）＋南浦洞，最後一天從海雲台直接前往金海機場。機票、住宿、膠囊列車、Visit Busan Pass 與遊艇皆已完成預訂；11/4（三）21:05 高鐵 690 次左營→桃園亦已訂位。</p>
+      <div class="grid">
+        <article class="card info-card"><strong>✈️ 去程｜7C6164</strong><p>11/05（四）桃園 TPE 第 1 航廈 02:50 → 釜山 PUS 06:10<br>PNR：<b>LBPP7Z</b><br>託運行李：<b>10 kg／人</b></p></article>
+        <article class="card info-card"><strong>✈️ 回程｜7C6255</strong><p>11/09（一）釜山 PUS 14:05 → 高雄 KHH 16:05<br>PNR：<b>XFGRPT</b>／<b>WCH3GM</b><br>託運行李：<b>15 kg／人</b></p></article>
+        <article class="card info-card"><strong>📍 住宿</strong><p>호텔 라뮤에뜨（Hotel La Mouette）<br>해운대로 620・確認號 26032978<br>11/05 15:00 後入住・11/09 11:00 前退房</p></article>
+      </div>
+      <div class="note" style="margin-top:16px"><strong>11/4（三）北上高鐵｜已完成訂位</strong><p>車次 <b>690</b>，左營 <b>21:05</b> → 桃園 <b>22:41</b>（行車約 1 小時 36 分）；標準車廂對號座，<b>5 車 12D／12E</b>，全票 2 張共 <b>TWD 2,340</b>（會員指定 88 折），高鐵訂位代號 <b>07127207</b>。</p><p>狀態為<b>未取票</b>（信用卡付款），出發前記得先取票；抵達高鐵桃園站後轉桃園機場捷運：<b>A18 高鐵桃園站 → A12 機場第一航廈</b>，車程約 15 分鐘。22:41 到站後可搭 22:47 或 23:02 的普通車，A18 往機場方向末班為 00:04（另 23:34、23:49 為增開往機場班次），銜接相當充裕。</p><p>桃捷時刻表目前更新至 2026/11/30，高鐵班次亦可能異動，出發前請再確認一次。</p></div>
+    </section>
+
+    <section id="booking">
+      <h2>訂位代號與憑證</h2>
+      <p class="lead">手機先存好這張表：機場報到、飯店入住與景點換票都會用到。建議把機票、飯店、膠囊列車、Pass 與遊艇憑證截圖存進相簿。</p>
+      <div class="grid">
+        <article class="card pass-plan">
+          <h3>號碼總表</h3>
+          <table>
+            <thead><tr><th>項目</th><th>號碼／內容</th></tr></thead>
+            <tbody>
+              <tr><td>Trip.com 訂單編號</td><td>1616333997845333</td></tr>
+              <tr><td>去程 7C6164 PNR</td><td>LBPP7Z（兩位旅客相同）</td></tr>
+              <tr><td>回程 7C6255 PNR</td><td>LEE CHUN JIE：XFGRPT<br>HSIEH CHE HAO：WCH3GM</td></tr>
+              <tr><td>高鐵訂位代號<br>（11/04 北上）</td><td>07127207<br>車次 690・左營 21:05 → 桃園 22:41・5 車 12D／12E・未取票</td></tr>
+              <tr><td>飯店訂單編號</td><td>1616333214949359（PIN 碼 5182）</td></tr>
+              <tr><td>飯店確認號</td><td>26032978</td></tr>
+              <tr><td>天空膠囊列車</td><td>預約號 RS26018340956／票號 26019113368-1</td></tr>
+              <tr><td>Visit Busan Pass（Klook）</td><td>訂單 NZY593309<br>憑證 2609C15001813197／2609C15001813199</td></tr>
+              <tr><td>Diamond Bay 遊艇</td><td>0d08bd77-2fbb-4e33-b92b-6317e88d29b3</td></tr>
+            </tbody>
+          </table>
+        </article>
+        <article class="card flight">
+          <h3>旅客、行李與住宿聯絡</h3>
+          <p>旅客姓名：<br>LEE CHUN JIE<br>HSIEH CHE HAO<br><small>護照英文姓名請與電子機票完全一致。</small></p>
+          <p>行李額度（每人）：<b>去程託運 10 kg、回程託運 15 kg</b>；手提 1 件（55×40×20 cm）＋個人隨身物品 1 件（30×15×40 cm），兩件合計不超過 10 kg。<br><small>托運額度依訂票內容為準，出發前請再核對一次電子機票。</small></p>
+          <p>飯店電話：+82-51-7312200／+82-10-6646-6200<br>韓文地址：부산 해운대구 해운대로 620, 48094<br>英文地址：620 Haeun-daero, Haeundae-gu, Busan</p>
+        </article>
+      </div>
+      <div class="note" style="margin-top:16px"><strong>天空膠囊列車票（已付款・11/06 09:00–09:30 第 2 梯次）</strong><p>One way・2 人・50,000 KRW（信用卡付款），狀態：預約完成。梯次表示可在該時段內依抵達順序入場，頭尾時間並非實際出發時間；尾浦站與松亭站為終點站，所有人須下車。<a href="https://www.tbluelinepark.com/m/mobileTicket/RS26018340956/E05DCD88A9F41F6FC511D001C7AD43146EE21C16C4B3B928A7DBF6A671B894C8" target="_blank">開啟電子票（海雲台藍線公園）</a></p></div>
+    </section>
+
+    <section id="day1">
+      <article class="card route">
+        <div class="date"><div><div class="dow">THURSDAY</div><div class="num">11/05</div></div><span>海雲台初見</span></div>
+        <div class="route-body">
+          <div class="route-head"><div><div class="zone">Haeundae · Hwangnyeongsan</div><h3>落地、海景與山頂夜色</h3></div><div class="tags"><span class="tag pass">PASS × 1</span><span class="tag photo">攝影勘景</span></div></div>
+          <ol class="timeline">
+            <li><span class="time">06:10</span><div class="event"><b>抵達金海國際機場（國際航廈）</b><small>7C6164 已確認 02:50 由桃園第 1 航廈起飛；入境、領行李與交通卡，預留約 60–90 分鐘。</small><a class="nm" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EA%B9%80%ED%95%B4%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">07:40</span><div class="event"><b>輕軌＋地鐵前往海雲台</b><small>機場輕軌→沙上站，轉地鐵 2 號線→海雲台站；約 75–90 分鐘。</small></div></li>
+            <li><span class="time">09:20</span><div class="event"><b>호텔 라뮤에뜨 寄放行李</b><small>櫃檯位於 6F；正式入住為 15:00 後。報到時可出示訂單編號 1616333214949359（PIN 5182）與確認號 26032978。</small><a class="nm" href="https://map.naver.com/p/search/%ED%98%B8%ED%85%94%20%EB%9D%BC%EB%AE%A4%EC%97%90%EB%9C%A8" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">09:50</span><div class="event"><b>EGG DROP 早餐</b><small>以海雲台店為優先；若分店營業異動，改吃海雲台市場早餐。</small><a class="nm" href="https://map.naver.com/p/search/%EC%97%90%EA%B7%B8%EB%93%9C%EB%9E%8D%20%ED%95%B4%EC%9A%B4%EB%8C%80" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">10:40</span><div class="event"><b>海雲台海水浴場 → Busan Bada Sand</b><small>沿沙灘慢走、買釜山海洋造型伴手禮。</small><a class="nm" href="https://map.naver.com/p/search/%ED%95%B4%EC%9A%B4%EB%8C%80%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">12:00</span><div class="event"><b>BUSAN X the SKY</b><small>白天視野較清楚；停留約 1.5 小時。</small><div class="tags"><span class="tag pass">Visit Busan Pass</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%97%91%EC%8A%A4%EB%8D%94%EC%8A%A4%EC%B9%B4%EC%9D%B4" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">14:00</span><div class="event"><b>午餐 → 回飯店入住休息</b><small>紅眼班機後刻意保留約 1.5 小時休息；約 15:20 再出門，下午走「新世界百貨 Centum City」或「西面」二選一。飯店可先寄放行李、補眠或洗澡。</small></div></li>
+                        <li><span class="time">15:30</span><div class="event"><b>選項 A｜新世界百貨 Centum City</b><small>地鐵 2 號線海雲台→센텀시티（2 站，約 6 分，站內直結）。百貨 10:30–20:00（週五～日延長至 20:30）、餐廳街至 21:00；同棟 Spa Land 為 08:00–23:00（最後入場 22:00），想泡湯至少要留 2 小時。B1 美食街、영화의전당與벡스코都在步行圈。約 16:20 叫車上山。</small><div class="tags"><span class="tag pass">逛街採買</span><span class="tag book">每月一次休館日</span></div><a class="nm" href="https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">15:30</span><div class="event"><b>選項 B｜西面 서면＋전포카페거리</b><small>地鐵 2 號線海雲台→서면（約 25 分）。地下街 서면지하상가直通롯데백화점 부산본점與부전시장；전포카페거리（전포놀이마루一帶）是舊工具街改造的咖啡與小物聚落，離서면站步行約 10 分鐘。想拍巷弄、喝咖啡就選這個，離荒嶺山也最近。約 16:20 叫車上山。</small><div class="tags"><span class="tag photo">巷弄・咖啡</span></div><a class="nm" href="https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%EC%A7%80%ED%95%98%EC%83%81%EA%B0%80" target="_blank">📍 NAVER Map</a><a class="nm" href="https://map.naver.com/p/search/%EC%A0%84%ED%8F%AC%EC%B9%B4%ED%8E%98%EA%B1%B0%EB%A6%AC" target="_blank">📍 전포카페거리</a></div></li>
+            <li><span class="time">16:20</span><div class="event"><b>計程車前往荒嶺山烽火台</b><small>自센텀시티約 25–30 分鐘、自서면約 15–20 分鐘。山區公車班次少，建議直接叫車；導航設「황령산봉수대 주차장」，停車場步行上山約 5–15 分鐘，山頂風大、體感低 3–5 度。</small><a class="nm" href="https://map.naver.com/p/search/%ED%99%A9%EB%A0%B9%EC%82%B0%EB%B4%89%EC%88%98%EB%8C%80%20%EC%A3%BC%EC%B0%A8%EC%9E%A5" target="_blank">📍 황령산 주차장</a></div></li>
+            <li><span class="time">16:50</span><div class="event"><b>抵達烽火台・卡位日落</b><small>11 月初釜山日落約 17:25，日落前 1 小時到最保險。先勘查廣安大橋拍攝角度，順拍日落與城市亮燈；日落到夜景（約 18:20 後）可一次拍完。</small><div class="tags"><span class="tag photo">腳架＋長焦</span></div></div></li>
+            <li><span class="time">18:30</span><div class="event"><b>下山・返回海雲台</b><small>計程車約 25–30 分鐘回海雲台；山區夜間叫車較慢，建議 18:15 就先叫車或請去程司機留聯絡方式。</small></div></li>
+            <li><span class="time">19:00</span><div class="event"><b>海雲台晚餐｜炸雞＋啤酒</b><small>紅眼班機後的第一晚，最適合在飯店附近吃치킨配생맥주；名單見下方說明。隔天需提早到尾浦報到，建議 21:30 前回房。</small><div class="tags"><span class="tag book">晚餐首選</span></div></div></li>
+          </ol>
+          <div class="note" style="background:#e9f2fb;border-color:#c3d9f0"><strong>D1 下午二選一怎麼挑</strong><p><b>新世界百貨 Centum City</b>：購物、退稅、室內行程最舒服，海雲台出發只要 6 分鐘，但離荒嶺山較遠（車程 25–30 分）。<b>西面 서면</b>：巷弄咖啡、地下街、便宜好逛，離荒嶺山最近（車程 15–20 分），但單程地鐵約 25 分。<br>兩者都要在 16:20 前上車，才趕得上 17:25 的日落。若當天班機延誤或想輕鬆點，直接放棄這一站、提早回飯店休息，也是合理選擇。</p></div>
+
+          <div class="note"><strong>D1 炸雞口袋名單（海雲台，離飯店步行可到）</strong>
+            <p><b>21세기굽는치킨 海雲台店</b>｜在地人常去的노포，招牌是直火「굽는치킨」，皮脆肉嫩、比連鎖清爽。1F 僅外帶、2F 內用（有호프）。해운대해변로209번길 20（오션타워後方），離飯店步行約 8–10 分鐘。<a class="nm" href="https://map.naver.com/p/search/21%EC%84%B8%EA%B8%B0%EA%B5%BD%EB%8A%94%EC%B9%98%ED%82%A8%20%ED%95%B4%EC%9A%B4%EB%8C%80%EC%A0%90" target="_blank">📍 NAVER Map</a></p>
+            <p><b>부산통닭</b>｜海雲台廣場一帶的老字號，후라이드與양념都有，整棟 1–3 樓座位多、翻桌快。適合想吃「傳統통닭」的話。<a class="nm" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%ED%86%B5%EB%8B%AD%20%ED%95%B4%EC%9A%B4%EB%8C%80" target="_blank">📍 NAVER Map</a></p>
+            <p><b>장수통닭</b>｜在地評價好的傳統통닭，口味偏家常。<a class="nm" href="https://map.naver.com/p/search/%EC%9E%A5%EC%88%98%ED%86%B5%EB%8B%AD%20%ED%95%B4%EC%9A%B4%EB%8C%80" target="_blank">📍 NAVER Map</a></p>
+            <p><b>푸라닭 부산해운대역점</b>｜就在海雲台站旁（구남로8번길 9，2F）。連鎖店品質穩定、外帶回飯店最方便。<a class="nm" href="https://map.naver.com/p/search/%ED%91%B8%EB%9D%BC%EB%8B%AD%20%EB%B6%80%EC%82%B0%ED%95%B4%EC%9A%B4%EB%8C%80%EC%97%AD%EC%A0%90" target="_blank">📍 NAVER Map</a></p>
+            <p><b>텍사스두마리치킨 마린시티점</b>｜高 CP 值「두마리」，還有漢堡，營業到 24:00，適合晚歸或外帶回飯店。<a class="nm" href="https://map.naver.com/p/search/%ED%85%8D%EC%82%AC%EC%8A%A4%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8%20%EB%A7%88%EB%A6%B0%EC%8B%9C%ED%8B%B0%EC%A0%90" target="_blank">📍 NAVER Map</a></p>
+            <p>小提醒：1) 韓國炸雞店多為傍晚才開（不少 16:00–17:00 起），出發前用 NAVER Map 看一下當天營業時間。2) 外送 App 多需韓國手機號，建議內用或直接到店外帶。3) 內用치킨＋生啤通常是「치킨 1 隻＋맥주 2 杯」起跳；兩人點半隻或 1 隻加一份치즈볼就很飽。</p>
+          </div>
+
+        </div>
+      </article>
+    </section>
+
+    <section id="day2">
+      <article class="card route">
+        <div class="date" style="background:#0b7189"><div><div class="dow">FRIDAY</div><div class="num">11/06</div></div><span>東海岸藍線</span></div>
+        <div class="route-body">
+          <div class="route-head"><div><div class="zone">Mipo · Cheongsapo · Haedong Yonggungsa · Diamond Bay</div><h3>膠囊列車、龍宮寺與夜間遊艇</h3></div><div class="tags"><span class="tag pass">PASS × 2</span><span class="tag pass">已預約</span></div></div>
+          <ol class="timeline">
+            <li><span class="time">08:15</span><div class="event"><b>抵達尾浦站報到</b><small>天空膠囊 11 月冬季營運約 08:30–18:00；本次預約 09:00–09:30 第 2 梯次，建議 08:30 前到場。</small><a class="nm" href="https://map.naver.com/p/search/%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC%20%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">09:00</span><div class="event"><b>天空膠囊列車｜尾浦 → 青沙浦</b><small>面海方向視野漂亮，車程約 30 分鐘。已預約 One way・2 人（50,000 KRW，預約號 RS26018340956）；須在 09:00–09:30 時段內依抵達順序入場。</small><div class="tags"><span class="tag pass">已付款</span><span class="tag book">RS26018340956</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC%20%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">09:45</span><div class="event"><b>青沙浦散步 → 踏石展望臺</b><small>拍紅白燈塔與海岸鐵道；步行至青沙浦踏石展望臺。</small><a class="nm" href="https://map.naver.com/p/search/%EC%B2%AD%EC%82%AC%ED%8F%AC%20%EB%8B%A4%EB%A6%BF%EB%8F%8C%EC%A0%84%EB%A7%9D%EB%8C%80" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">11:00</span><div class="event"><b>計程車前往海東龍宮寺</b><small>車程約 20–30 分鐘；避開轉乘公車的耗時。</small><a class="nm" href="https://map.naver.com/p/search/%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">11:30</span><div class="event"><b>海東龍宮寺＋附近午餐</b><small>下到海岸再回山門階梯較多，預留約 2 小時。</small><a class="nm" href="https://map.naver.com/p/search/%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">13:40</span><div class="event"><b>計程車至松亭站 → 海岸列車回尾浦</b><small>搭海岸列車完成回程；使用 Visit Busan Pass 換票。</small><div class="tags"><span class="tag pass">海岸列車</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC%20%EC%86%A1%EC%A0%95%EC%A0%95%EA%B1%B0%EC%9E%A5" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">15:15</span><div class="event"><b>回海雲台休息 → The Bay 101／冬柏島</b><small>遊艇改為夜間班次後，午後不必趕碼頭；可回飯店補眠、海邊散步，或先逛 The Bay 101。</small><a class="nm" href="https://map.naver.com/p/search/%EB%8D%94%EB%B2%A0%EC%9D%B4101" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">17:30</span><div class="event"><b>海雲台晚餐</b><small>先吃飽再上船；碼頭周邊餐廳在煙火節前後較擁擠，建議提早用餐。</small></div></li>
+            <li><span class="time">19:00</span><div class="event"><b>Diamond Bay 碼頭報到</b><small>須提前 30 分鐘報到並攜帶護照；預訂編號 0d08bd77-2fbb-4e33-b92b-6317e88d29b3。</small><div class="tags"><span class="tag book">護照必帶</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EB%B2%A0%EC%9D%B4%20%EB%B6%80%EC%82%B0" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">19:30</span><div class="event"><b>鑽石灣遊艇｜Haeundae Night Course</b><small>航程約 50 分鐘，2 人・使用 Visit Busan Pass。夜間航線可看海雲台與廣安大橋燈火，實際航線依海況安排。</small><div class="tags"><span class="tag pass">Visit Busan Pass</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EB%B2%A0%EC%9D%B4%20%EB%B6%80%EC%82%B0" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">20:40</span><div class="event"><b>返回海雲台飯店</b><small>碼頭距飯店車程約 10 分鐘。若因風浪停駛，改逛 The Bay 101／冬柏島夜景。</small></div></li>
+          </ol>
+          <div class="note"><strong>遊艇已改為夜間班次</strong><p>原規劃的 16:30 平日 Pass 航班，已改成 11/06（五）19:30 出航的 Haeundae Night Course（夜間航線），報到時間 19:00。請務必攜帶護照；天候不佳可能停駛，出發前 48 小時再確認一次官方公告。</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="day3">
+      <article class="card route">
+        <div class="date" style="background:#a63d36"><div><div class="dow">SATURDAY</div><div class="num">11/07</div></div><span>煙火主日</span></div>
+        <div class="route-body">
+          <div class="route-head"><div><div class="zone">Igidae · Millak · Gwangalli</div><h3>二妓臺散步，廣安大橋煙火攝影</h3></div><div class="tags"><span class="tag photo">釜山煙火節</span><span class="tag book">超早卡位</span></div></div>
+          <ol class="timeline">
+            <li><span class="time">08:00</span><div class="event"><b>二妓臺海岸散步</b><small>不走完整縱走，安排「二妓臺入口／御蔚庭一帶」約 1.5 小時，保留煙火體力。</small><a class="nm" href="https://map.naver.com/p/search/%EC%9D%B4%EA%B8%B0%EB%8C%80" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">10:15</span><div class="event"><b>水邊最高豬肉湯飯｜民樂本店</b><small>24 小時營業；提早吃可避開煙火節人潮，推薦 항정국밥。</small><a class="nm" href="https://map.naver.com/p/search/%EC%88%98%EB%B3%80%EC%B5%9C%EA%B3%A0%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5%20%EB%AF%BC%EB%9D%BD%EB%B3%B8%EC%A0%90" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">11:30</span><div class="event"><b>갈매기샌드 광안점</b><small>買 Seagull Sand 與飲料帶去等煙火；熱門口味可能售罄。</small><a class="nm" href="https://map.naver.com/p/search/%EA%B0%88%EB%A7%A4%EA%B8%B0%EC%83%8C%EB%93%9C%20%EA%B4%91%EC%95%88%EC%A0%90" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">12:30</span><div class="event"><b>前往廣安里海灘卡位</b><small>選廣安大橋正面、前景干擾少的位置。煙火節逾百萬人潮等級，下午交通管制後勿再跨區。</small><div class="tags"><span class="tag photo">主拍攝點</span></div><a class="nm" href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">18:00</span><div class="event"><b>暖場節目</b><small>2026 活動公布時段約 18:00–21:00；現場公告優先。</small></div></li>
+            <li><span class="time">19:00</span><div class="event"><b>第 21 屆釜山煙火節</b><small>主場為廣安里海水浴場，日期已確認為 2026/11/7（六）。</small><a class="nm" href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">21:00</span><div class="event"><b>散場回海雲台</b><small>不要急著擠最近車站；可先往民樂／水營方向步行，預估 22:30–23:30 才回飯店。</small></div></li>
+          </ol>
+          <div class="note"><strong>煙火拍攝設定起點</strong><p>腳架、快門線、備用電池；RAW、M 模式、ISO 100、f/8–f/11、2–5 秒起試，關閉防手震與長曝降噪。若要改在荒嶺山拍全景，需更早上山並確認當日道路／登山管制。<a class="nm" href="https://map.naver.com/p/search/%ED%99%A9%EB%A0%B9%EC%82%B0%EB%B4%89%EC%88%98%EB%8C%80" target="_blank">📍 NAVER Map</a></p></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="day4">
+      <article class="card route">
+        <div class="date" style="background:#bd6d28"><div><div class="dow">SUNDAY</div><div class="num">11/08</div></div><span>山城與影島</span></div>
+        <div class="route-body">
+          <div class="route-head"><div><div class="zone">North Port · Gamcheon · Songdo · Yeongdo · Nampo-dong</div><h3>北港看부캉이、彩色山城、海景咖啡、ARTE 與南浦洞夜逛</h3></div><div class="tags"><span class="tag pass">PASS × 2</span><span class="tag photo">巷弄攝影</span><span class="tag book">夜間購物</span></div></div>
+          <ol class="timeline">
+                        <li><span class="time">06:40</span><div class="event"><b>飯店出發 → 北港親水公園（북항친수공원）</b><small>建議直接叫計程車走 광안대교，週日清晨車少約 30–40 分鐘；搭地鐵需 2 號線→서면 轉 1 號線至 부산역，約 55–60 分鐘。目標 07:20 抵達。</small></div></li>
+            <li><span class="time">07:20</span><div class="event"><b>北港親水公園｜看「부캉이」흑상어</b><small>2026/9/18 起一尾約 3–3.5 m 的 흑상어（黑鯊，性情溫和）游進公園人工水道，被暱稱「부캉이」。兩次引導回外海的作業未成功，官方目前改為觀察等待，10 月中仍在園內，連外媒都來報導。拍攝點以第 5 步道橋（제5보도교）一帶最好，多數遊客說幾分鐘就會浮出一次。停留約 45–50 分鐘。</small><div class="tags"><span class="tag photo">清晨卡位</span><span class="tag book">野生動物</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%B6%81%ED%95%AD%EC%B9%9C%EC%88%98%EA%B3%B5%EC%9B%90" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">08:10</span><div class="event"><b>出發前往甘川文化村</b><small>計程車約 25–30 分鐘；約 08:40 抵達，可先在入口買咖啡、拍空景，等 09:00 店家開門。</small></div></li>
+            <li><span class="time">09:00</span><div class="event"><b>甘川文化村</b><small>小王子景觀台、Little Prince House、彩色屋舍；尊重住宅區並降低音量。</small><a class="nm" href="https://map.naver.com/p/search/%EA%B0%90%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">10:50</span><div class="event"><b>計程車前往松島</b><small>約 15–20 分鐘。</small><a class="nm" href="https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">11:15</span><div class="event"><b>松島海上纜車＋龜島</b><small>搭往返纜車，並走松島天空步道／龜島周邊；11 月通常 09:00–21:00。</small><div class="tags"><span class="tag pass">Visit Busan Pass</span></div><a class="nm" href="https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">13:10</span><div class="event"><b>白淺灘文化村＋흰여울점빵 泡麵</b><small>先吃泡麵再走海岸隧道與階梯。週日營業資訊在各平台不一致，出發前務必確認；若休息，改附近海景咖啡或南浦洞午餐。 約 14:00 離開，前往海景咖啡廳。</small><a class="nm" href="https://map.naver.com/p/search/%ED%9D%B0%EC%97%AC%EC%9A%B8%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84" target="_blank">📍 NAVER Map</a></div></li>
+                        <li><span class="time">14:20</span><div class="event"><b>THRILL ON THE MUG（스릴온더머그）海景咖啡</b><small>影島海景大咖啡廳，地址 해양힐링로 55，位於白淺灘往太宗臺的路上，三層樓落地窗與海景座位，午後光線最好。各平台營業時間不一致（常見標示 10:00–21:30，亦有 10:30–19:00 的舊資訊），出發前請再確認；週末與日落時段常需候位，1 樓設有停車場。停留約 1 小時，重點是坐下來休息、補咖啡因，順便拍海景。</small><div class="tags"><span class="tag photo">海景咖啡・休息</span></div><a class="nm" href="https://map.naver.com/p/search/%EC%8A%A4%EB%A6%B4%EC%98%A8%EB%8D%94%EB%A8%B8%EA%B7%B8" target="_blank">📍 NAVER Map</a><a class="gm" href="https://maps.app.goo.gl/WkfoWVsrq2M8sCDG8" target="_blank">🗺 Google Maps</a></div></li>
+<li><span class="time">15:45</span><div class="event"><b>計程車前往 ARTE MUSEUM BUSAN</b><small>影島館地址：29, Haeyang-ro 247beon-gil；自스릴온더머그出發約 15–20 分鐘。今晚要接南浦洞，咖啡廳建議 15:30 前離開。</small><a class="nm" href="https://map.naver.com/p/search/%EC%95%84%EB%A5%B4%EB%96%BC%EB%AE%A4%EC%A7%80%EC%97%84%20%EB%B6%80%EC%82%B0" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">16:15</span><div class="event"><b>ARTE MUSEUM BUSAN</b><small>每日 10:00–20:00，最後入場 19:00；停留約 1.5–2 小時。本次以 <b>Visit Busan Pass 換票入場</b>（BIG5 第 5 個景點）。約 18:15 離開，接續南浦洞夜逛。</small><div class="tags"><span class="tag pass">Visit Busan Pass</span></div><a class="nm" href="https://map.naver.com/p/search/%EC%95%84%EB%A5%B4%EB%96%BC%EB%AE%A4%EC%A7%80%EC%97%84%20%EB%B6%80%EC%82%B0" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">18:30</span><div class="event"><b>樂天百貨 光復店（롯데백화점 광복점）</b><small>計程車過影島大橋約 10–15 分鐘即抵南浦洞，先逛百貨公司。週五～日營業至 20:30（餐廳街至 21:00），平日 20:00 打烊。影島大橋、樂天百貨與樂天超市同在中央大路一帶，動線集中。</small><div class="tags"><span class="tag book">週日至 20:30</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90%20%EA%B4%91%EB%B3%B5%EC%A0%90" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">19:40</span><div class="event"><b>南浦洞時尚街（광복로 패션거리）</b><small>光復路一帶匯集美妝、眼鏡、運動與outdoor、平價服飾與連鎖品牌，適合散步兼採買；巷弄裡的먹자골목小吃攤也多。</small><a class="nm" href="https://map.naver.com/p/search/%EB%82%A8%ED%8F%AC%EB%8F%99%20%EA%B4%91%EB%B3%B5%EB%A1%9C%20%ED%8C%A8%EC%85%98%EA%B1%B0%EB%A6%AC" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">20:00</span><div class="event"><b>南浦洞晚餐</b><small>以南浦洞먹자골목／포장마차거리為主要覓食區，烤肉、곱창、밀면、定食等選擇集中；週日晚間熱門店家仍可能候位。</small><a class="nm" href="https://map.naver.com/p/search/%EB%82%A8%ED%8F%AC%EB%8F%99%20%EB%A8%B9%EC%9E%90%EA%B3%A8%EB%AA%A9" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">21:15</span><div class="event"><b>樂天超市 光復店（롯데마트 광복점・B1）</b><small>與百貨同棟，營業至約 23:00（各平台略有差異，出發前再確認）。伴手禮、泡麵、餅乾、海苔與生活雜貨一次買齊；每月第 2、4 個週一休館，本次 11/8（日）正常營業。</small><div class="tags"><span class="tag book">伴手禮補貨</span></div><a class="nm" href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A7%88%ED%8A%B8%20%EA%B4%91%EB%B3%B5%EC%A0%90" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">22:00</span><div class="event"><b>計程車返回海雲台</b><small>約 45–55 分鐘；若時間晚了可改搭地鐵 1 號線（南浦站→西面轉 2 號線），但轉乘較費時。</small><a class="nm" href="https://map.naver.com/p/search/%EB%82%A8%ED%8F%AC%EB%8F%99" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">22:55</span><div class="event"><b>抵達飯店・整理行李</b><small>隔天 11:00 前退房，建議今晚先整理大半。</small></div></li>
+          </ol>
+          <div class="note" style="background:#e8f6f3;border-color:#bfe0d8"><strong>부캉이（北港親水公園那尾鯊魚）實用提醒</strong>
+            <p>公園就在 <b>부산역東側出口旁</b>（동구 이순신대로 164），<b>05:00–24:00 全年無休、免費</b>。第 5 步道橋一帶是主要觀察點，很多人站在보도교與水岸欄杆邊等牠浮上來。</p>
+            <p>停車：公園附設停車場與 부산항국제여객터미널 停車場，假日與連假經常滿場、周邊也會塞車，清晨 07:20 到正好避開；若遇管制請聽現場人員引導。</p>
+            <p><b>請留意</b>：부캉이 是野生動物，隨時可能自行游出或由官方完成引導返回外海，出發前一週務必再確認最新狀況，以免撲空；現場也請勿餵食、勿跨越護欄。</p>
+          </div>
+
+          <div class="note"><strong>南浦洞晚餐名單（口袋選項，出發前請再確認公休）</strong><p>南浦洞먹자골목與포장마차거리選擇最多，以下為網路評價較集中的幾家：<b>남포돈갈비</b>（돼지갈비・近南浦站）<a class="nm" href="https://map.naver.com/p/search/%EB%82%A8%ED%8F%AC%EB%8F%88%EA%B0%88%EB%B9%84" target="_blank">📍 NAVER Map</a>　<b>백화양곱창</b>（양곱창）<a class="nm" href="https://map.naver.com/p/search/%EB%B0%B1%ED%99%94%EC%96%91%EA%B3%B1%EC%B0%BD" target="_blank">📍 NAVER Map</a>　<b>할매가야밀면</b>（밀면）<a class="nm" href="https://map.naver.com/p/search/%ED%95%A0%EB%A7%A4%EA%B0%80%EC%95%BC%EB%B0%80%EB%A9%B4" target="_blank">📍 NAVER Map</a>　<b>콩밭에</b>（韓式定食・가자미구이 有名）<a class="nm" href="https://map.naver.com/p/search/%EC%BD%A9%EB%B0%AD%EC%97%90%20%EB%82%A8%ED%8F%AC%EB%8F%99" target="_blank">📍 NAVER Map</a></p><p>點餐提醒：韓國烤肉多以「人份」計價，兩人建議 2 份肉＋1 份主食；部分店家 20:15 左右即為最後點餐，出發前可先電話確認。</p></div>
+
+        </div>
+      </article>
+    </section>
+
+    <section id="day5">
+      <article class="card route">
+        <div class="date" style="background:#506a73"><div><div class="dow">MONDAY</div><div class="num">11/09</div></div><span>回高雄</span></div>
+        <div class="route-body">
+          <div class="route-head"><div><div class="zone">Haeundae → Gimhae Airport</div><h3>悠閒早餐，直接前往機場</h3></div></div>
+          <ol class="timeline">
+            <li><span class="time">08:00</span><div class="event"><b>海雲台早餐與最後採買</b><small>以飯店周邊為主，不安排跨區景點。</small></div></li>
+            <li><span class="time">09:20</span><div class="event"><b>退房</b><small>確認護照、退稅單、行動電源與托運行李。</small></div></li>
+            <li><span class="time">09:40</span><div class="event"><b>出發前往金海機場</b><small>地鐵 2 號線海雲台→沙上，轉機場輕軌；預留約 90 分鐘。</small></div></li>
+            <li><span class="time">11:15</span><div class="event"><b>抵達金海國際機場</b><small>辦理報到、托運、退稅與安檢。</small><a class="nm" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EA%B9%80%ED%95%B4%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank">📍 NAVER Map</a></div></li>
+            <li><span class="time">14:05</span><div class="event"><b>7C6255 起飛</b><small>釜山 PUS 國際航廈 → 高雄 KHH 國際航廈，16:05 抵達（台灣時間）。回程 PNR：LEE CHUN JIE XFGRPT／HSIEH CHE HAO WCH3GM。</small></div></li>
+          </ol>
+        </div>
+      </article>
+    </section>
+
+    <section id="pass">
+      <h2>Visit Busan Pass 用法</h2>
+      <div class="grid">
+        <article class="card pass-plan" style="grid-column:span 12">
+          <h3>已購買：Klook 實體通行證・BIG 5</h3>
+          <p>訂單編號 <b>NZY593309</b>，2 張實體票卡（憑證號 2609C15001813197、2609C15001813199），使用日 2026/11/05，每次兌換 1 張憑證。本行程付費景點跨 D1、D2、D4，BIG5 不受連續 48 小時壓力，較符合目前動線；可選 2 個 A 組＋3 個 B 組，每景點使用一次，仍請以官方當日分組為準。</p>
+          <table>
+            <thead><tr><th>日期</th><th>項目</th><th>注意</th></tr></thead>
+            <tbody>
+              <tr><td>D1</td><td>BUSAN X the SKY</td><td>Pass 換票</td></tr>
+              <tr><td>D2</td><td>海雲台海岸列車</td><td>天空膠囊另購</td></tr>
+              <tr><td>D2</td><td>Diamond Bay 遊艇（19:30 夜間）</td><td>已預約、帶護照</td></tr>
+              <tr><td>D4</td><td>松島海上纜車</td><td>天候可能停駛</td></tr>
+              <tr><td>D4</td><td>ARTE MUSEUM BUSAN</td><td>Pass 換票入場</td></tr>
+            </tbody>
+          </table>
+          <div class="note" style="margin-top:16px"><strong>最常誤會</strong><p>Pass 兌換的是海岸列車，不是天空膠囊——天空膠囊已另行預約（11/06 09:00 梯次）。BIG5 的 5 個景點分配：D1 BUSAN X the SKY、D2 海岸列車＋鑽石灣遊艇、D4 松島海上纜車＋ARTE MUSEUM BUSAN；實際 A／B 分組以官方當日公告為準。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <h2>出發前預約與行李清單</h2>
+      <div class="card">
+        <div class="checklist">
+          <label class="check"><input type="checkbox" data-key="flight"><span>核對電子機票：去程 7C6164 02:50（PNR LBPP7Z）、回程 7C6255 14:05（PNR XFGRPT／WCH3GM），兩人皆已出票</span></label>
+          <label class="check"><input type="checkbox" data-key="rail"><span>取票：11/4 高鐵 690 次（左營 21:05 → 桃園 22:41，訂位代號 07127207，目前未取票）</span></label>
+          <label class="check"><input type="checkbox" data-key="capsule"><span>天空膠囊已預約 11/06 09:00–09:30（預約號 RS26018340956）— 存好電子票</span></label>
+          <label class="check"><input type="checkbox" data-key="yacht"><span>Diamond Bay 遊艇已預約 11/06 19:30 夜間班次 — 19:00 報到、帶護照（編號 0d08bd77）</span></label>
+          <label class="check"><input type="checkbox" data-key="pass"><span>Visit Busan Pass BIG5 已購買（Klook NZY593309，2 張實體卡）</span></label>
+          <label class="check"><input type="checkbox" data-key="voucher"><span>把機票、飯店、膠囊列車、Pass、遊艇憑證截圖存進手機相簿</span></label>
+          <label class="check"><input type="checkbox" data-key="hotel"><span>確認飯店入住資料（訂單 1616333214949359・PIN 5182・確認號 26032978）</span></label>
+          <label class="check"><input type="checkbox" data-key="fireworks"><span>確認煙火節交通管制、是否購買座位票</span></label>
+          <label class="check"><input type="checkbox" data-key="camera"><span>相機、廣角／標準變焦、腳架、快門線、備用電池</span></label>
+          <label class="check"><input type="checkbox" data-key="shark"><span>出發前一週確認「부캉이」是否仍在北港親水公園</span></label>
+          <label class="check"><input type="checkbox" data-key="weather"><span>出發前 48 小時確認遊艇（夜間班次）、纜車與展望臺天候公告</span></label>
+          <label class="check"><input type="checkbox" data-key="warm"><span>防風外套、暖暖包、輕便坐墊與行動電源</span></label>
+          <label class="check"><input type="checkbox" data-key="apps"><span>安裝 NAVER Map、Papago、Kakao T／Uber</span></label>
+        </div>
+        <div class="actions"><button onclick="window.print()">列印／另存 PDF</button><button class="secondary" onclick="clearChecks()">清除勾選</button></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>快速定位</h2>
+      <p class="lead">韓國地圖以韓文名稱搜尋最準：第一排直接開啟 NAVER Map（韓文搜尋），第二排為 Google Maps 備用。</p>
+      <div class="maplinks">
+        <a href="https://www.google.com/maps/search/?api=1&query=%ED%98%B8%ED%85%94+%EB%9D%BC%EB%AE%A4%EC%97%90%EB%9C%A8+%EB%B6%80%EC%82%B0" target="_blank">호텔 라뮤에뜨</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=BUSAN+X+the+SKY" target="_blank">BUSAN X the SKY</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5" target="_blank">尾浦站 미포정거장</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EC%B2%AD%EC%82%AC%ED%8F%AC+%EB%8B%A4%EB%A6%BF%EB%8F%8C%EC%A0%84%EB%A7%9D%EB%8C%80" target="_blank">踏石展望臺</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC" target="_blank">海東龍宮寺</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Diamond+Bay+Busan" target="_blank">Diamond Bay</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EC%88%98%EB%B3%80%EC%B5%9C%EA%B3%A0%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5+%EB%AF%BC%EB%9D%BD%EB%B3%B8%EC%A0%90" target="_blank">水邊最高豬肉湯飯</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EA%B0%88%EB%A7%A4%EA%B8%B0%EC%83%8C%EB%93%9C+%EA%B4%91%EC%95%88%EC%A0%90" target="_blank">갈매기샌드</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EA%B0%90%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84" target="_blank">甘川文化村</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4" target="_blank">松島海上纜車</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%ED%9D%B0%EC%97%AC%EC%9A%B8%EC%A0%90%EB%B9%B5" target="_blank">흰여울점빵</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=ARTE+MUSEUM+BUSAN" target="_blank">ARTE MUSEUM</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EB%82%A8%ED%8F%AC%EB%8F%99+%EA%B4%91%EB%B3%B5%EB%A1%9C+%ED%8C%A8%EC%85%98%EA%B1%B0%EB%A6%AC" target="_blank">南浦洞光復路</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90+%EA%B4%91%EB%B3%B5%EC%A0%90" target="_blank">樂天百貨光復店</a>
+        <a href="https://maps.app.goo.gl/WkfoWVsrq2M8sCDG8" target="_blank">스릴온더머그（Google）</a>
+      </div>
+      <div class="maplinks" style="margin-top:10px">
+        <a href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EA%B9%80%ED%95%B4%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" target="_blank">부산김해국제공항</a>
+        <a href="https://map.naver.com/p/search/%ED%98%B8%ED%85%94%20%EB%9D%BC%EB%AE%A4%EC%97%90%EB%9C%A8" target="_blank">호텔 라뮤에뜨</a>
+        <a href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%97%91%EC%8A%A4%EB%8D%94%EC%8A%A4%EC%B9%B4%EC%9D%B4" target="_blank">부산엑스더스카이</a>
+        <a href="https://map.naver.com/p/search/%EB%B8%94%EB%A3%A8%EB%9D%BC%EC%9D%B8%ED%8C%8C%ED%81%AC%20%EB%AF%B8%ED%8F%AC%EC%A0%95%EA%B1%B0%EC%9E%A5" target="_blank">블루라인파크 미포정거장</a>
+        <a href="https://map.naver.com/p/search/%EC%B2%AD%EC%82%AC%ED%8F%AC%20%EB%8B%A4%EB%A6%BF%EB%8F%8C%EC%A0%84%EB%A7%9D%EB%8C%80" target="_blank">청사포 다릿돌전망대</a>
+        <a href="https://map.naver.com/p/search/%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC" target="_blank">해동용궁사</a>
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C%EB%B2%A0%EC%9D%B4%20%EB%B6%80%EC%82%B0" target="_blank">다이아몬드베이</a>
+        <a href="https://map.naver.com/p/search/%ED%99%A9%EB%A0%B9%EC%82%B0%EB%B4%89%EC%88%98%EB%8C%80" target="_blank">황령산봉수대</a>
+        <a href="https://map.naver.com/p/search/%EC%9D%B4%EA%B8%B0%EB%8C%80" target="_blank">이기대</a>
+        <a href="https://map.naver.com/p/search/%EC%88%98%EB%B3%80%EC%B5%9C%EA%B3%A0%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5%20%EB%AF%BC%EB%9D%BD%EB%B3%B8%EC%A0%90" target="_blank">수변최고돼지국밥 민락본점</a>
+        <a href="https://map.naver.com/p/search/%EA%B0%88%EB%A7%A4%EA%B8%B0%EC%83%8C%EB%93%9C%20%EA%B4%91%EC%95%88%EC%A0%90" target="_blank">갈매기샌드 광안점</a>
+        <a href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" target="_blank">광안리해수욕장</a>
+        <a href="https://map.naver.com/p/search/%EA%B0%90%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84" target="_blank">감천문화마을</a>
+        <a href="https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%ED%95%B4%EC%83%81%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4" target="_blank">송도해상케이블카</a>
+        <a href="https://map.naver.com/p/search/%ED%9D%B0%EC%97%AC%EC%9A%B8%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%84" target="_blank">흰여울문화마을</a>
+        <a href="https://map.naver.com/p/search/%EC%8A%A4%EB%A6%B4%EC%98%A8%EB%8D%94%EB%A8%B8%EA%B7%B8" target="_blank">스릴온더머그</a>
+        <a href="https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0" target="_blank">신세계백화점 센텀시티</a>
+        <a href="https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%EC%A7%80%ED%95%98%EC%83%81%EA%B0%80" target="_blank">서면지하상가</a>
+        <a href="https://map.naver.com/p/search/%EC%A0%84%ED%8F%AC%EC%B9%B4%ED%8E%98%EA%B1%B0%EB%A6%AC" target="_blank">전포카페거리</a>
+        <a href="https://map.naver.com/p/search/%EB%B6%81%ED%95%AD%EC%B9%9C%EC%88%98%EA%B3%B5%EC%9B%90" target="_blank">북항친수공원</a>
+        <a href="https://map.naver.com/p/search/%EC%95%84%EB%A5%B4%EB%96%BC%EB%AE%A4%EC%A7%80%EC%97%84%20%EB%B6%80%EC%82%B0" target="_blank">아르떼뮤지엄 부산</a>
+        <a class="nm" href="https://map.naver.com/p/search/%EB%82%A8%ED%8F%AC%EB%8F%99%20%EA%B4%91%EB%B3%B5%EB%A1%9C%20%ED%8C%A8%EC%85%98%EA%B1%B0%EB%A6%AC" target="_blank">남포동 광복로 패션거리</a>
+        <a class="nm" href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90%20%EA%B4%91%EB%B3%B5%EC%A0%90" target="_blank">롯데백화점 광복점</a>
+        <a class="nm" href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A7%88%ED%8A%B8%20%EA%B4%91%EB%B3%B5%EC%A0%90" target="_blank">롯데마트 광복점</a>
+      </div>
+    </section>
+
+    <section class="sources">
+      <h2>查核來源與重要提醒</h2>
+      <ul>
+        <li><a href="https://www.jejuair.net/en/prepare/flight/viewScheduleInfo.do" target="_blank">Jeju Air 航班時刻表</a>：航空公司提醒班表可能變動；檔案中的時間請以電子機票為準。</li>
+        <li><a href="https://www.klook.com/en-HK/activity/171795-2026-busan-fireworks-festival-21th-anniversary-ticket/" target="_blank">2026 釜山煙火節資訊</a>：2026/11/7，主場廣安里海水浴場。</li>
+        <li><a href="https://www.bluelinepark.com/eng/skyCapsuleTime.do" target="_blank">海雲台藍線公園官方時刻</a>：11 月天空膠囊冬季營運至約 18:00。</li>
+        <li><a href="https://diamondbay.co.kr/en/visit-busan-pass/" target="_blank">Diamond Bay Pass 專屬預約</a>：平日航班、提前 30 分鐘與護照規定。</li>
+        <li><a href="https://en.busanaircruise.co.kr/info/time?rank=2" target="_blank">松島海上纜車官方營業時間</a>：9–11 月通常 09:00–21:00，末班售票提早 30 分鐘。</li>
+        <li><a href="https://artemuseum.com/busan" target="_blank">ARTE MUSEUM BUSAN 官方網站</a>：每日 10:00–20:00，最後入場 19:00。</li>
+        <li><a href="https://www.visitbusanpass.com/" target="_blank">Visit Busan Pass 官方網站</a>：景點名單、A／B 分組及優惠可能更新，使用前再次確認。</li>
+        <li><a href="https://www.tbluelinepark.com/m/mobileTicket/RS26018340956/E05DCD88A9F41F6FC511D001C7AD43146EE21C16C4B3B928A7DBF6A671B894C8" target="_blank">天空膠囊列車電子票</a>：2026/11/06（五）09:00–09:30 第 2 梯次入場，One way・2 人。</li>
+        <li><a href="https://diamondbay.co.kr/" target="_blank">Diamond Bay 官網</a>：夜間航班 Haeundae Night Course 的報到時間（提前 30 分鐘）、護照與天候停駛規定。</li>
+        <li><a href="https://www.thsrc.com.tw/" target="_blank">台灣高鐵官網</a>：11/04 車次 690 的時刻與票價以高鐵公告為準；對號座須先取票。</li>
+        <li><a href="https://www.tymetro.com.tw/tymetro-new/tw/_pages/travel-guide/timetable-A18" target="_blank">桃園捷運 A18 高鐵桃園站時刻表</a>：往機場方向末班 00:04（增開往機場班次），時刻表更新至 2026/11/30。</li>
+        <li><a href="https://www.lotteshopping.com/store/main?cstrCd=0333" target="_blank">롯데백화점 광복점 官方頁</a>：百貨公司週五～日營業至 20:30、餐廳街至 21:00；同棟 롯데마트 為每月第 2、4 個週一休館。</li>
+        <li><a href="https://maps.app.goo.gl/WkfoWVsrq2M8sCDG8" target="_blank">THRILL ON THE MUG（스릴온더머그）Google 地圖</a>：부산 영도구 해양힐링로 55，白淺灘往太宗臺路上的海景咖啡廳；各平台營業時間標示不一，出發前請再確認。</li>
+      </ul>
+      <p>資料更新日：2026/10/14（依 Trip.com 電子機票、高鐵票證資訊、飯店訂單、Klook 憑證、藍線公園電子票、Diamond Bay 預約頁面與桃園捷運官方時刻表核對）。營業時間、班次、活動管制與天候停駛均可能異動。</p>
+    </section>
+  </main>
+
+  <footer>BUSAN 2026 · 讓行程留一點空白，海才進得來。</footer>
+  <script>
+    const checks = document.querySelectorAll('input[type="checkbox"][data-key]');
+    checks.forEach(box => {
+      box.checked = localStorage.getItem('busan-' + box.dataset.key) === '1';
+      box.addEventListener('change', () => localStorage.setItem('busan-' + box.dataset.key, box.checked ? '1' : '0'));
+    });
+    function clearChecks(){ checks.forEach(box => { box.checked = false; localStorage.removeItem('busan-' + box.dataset.key); }); }
+  </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
